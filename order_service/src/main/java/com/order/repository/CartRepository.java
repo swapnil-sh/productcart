@@ -1,0 +1,21 @@
+package com.order.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.order.entity.Cart;
+import com.order.entity.Products;
+import com.order.entity.User;
+
+
+
+@Repository
+public interface CartRepository extends JpaRepository<Cart, Integer> {
+	
+	public Cart findByProductsAndUser(Products products,User user);
+
+	public List<Cart> findByUser(User user);
+
+}

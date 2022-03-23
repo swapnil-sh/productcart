@@ -1,0 +1,8 @@
+Hashkart Database Design Database Design
+
+user - id,name,phone_no
+products- id,name,price,qty,category
+cart- id,user_id,quantity
+orders - id, total_amouint,user_id
+order_product- order_id, product_id
+products_cart - cartd_id, prod_id
